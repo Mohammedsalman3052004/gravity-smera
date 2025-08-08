@@ -440,6 +440,13 @@
 
       .amenities-container {
         display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .amenities-container-cc {
+        display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -464,6 +471,126 @@
          text-align: center;
          margin-bottom: 4rem;
       }
+      .amenities-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .amenities-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 8px;
+            color: #2c3e50;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+        }
+        
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            justify-items: center;
+        }
+        
+        .amenity-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .amenity-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .amenity-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .amenity-item:hover .amenity-icon {
+            transform: scale(1.1);
+        }
+        
+        .amenity-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .amenities-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 60px 30px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .amenities-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .amenities-title {
+                font-size: 2rem;
+                letter-spacing: 4px;
+                margin-bottom: 50px;
+            }
+            
+            .amenities-container {
+                padding: 40px 10px;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 15px;
+            }
+            
+            .amenity-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .amenity-name {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .amenities-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .amenity-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .amenity-name {
+                font-size: 0.85rem;
+            }
+        }
     </style>
   </head>
 
@@ -923,7 +1050,7 @@
       <div class="container px-0">
         <h2 class="heading pb-2 text-center">Amenities</h2>
         <!-- <div class="amenities-container"> -->
-        <div class="row py-3 amenities-container">
+        <div class="row py-3 amenities-container-cc">
           <div class="col-md-3 col-6 text-center">
             <img
               src="./Images/all exclusive verdant trees.svg"
@@ -960,7 +1087,7 @@
             <h3 class="elementor-image-box-title">Serene Pond Ecosystem</h3>
           </div>
         </div>
-        <div class="row pb-3 amenities-container">
+        <div class="row pb-3 amenities-container-cc">
           <div class="col-md-3 col-6 text-center">
             <img
               src="./Images/sylvan forest clubhouse.svg"
@@ -995,7 +1122,7 @@
             <h3 class="elementor-image-box-title">Swimming Pool</h3>
           </div>
         </div>
-        <div class="row pb-3 flex center amenities-container">
+        <div class="row pb-3 flex center amenities-container-cc">
           <div class="col-md-3 col-6 text-center">
             <img
               src="./Images/rainwater recharge basins.svg"
@@ -1070,6 +1197,113 @@
         <!-- </div> -->
       </div>
     </section>
+
+    <div class="amenities-container">
+        <h1 class="amenities-title">AMENITIES</h1>
+        
+        <div class="amenities-grid">
+            <div class="amenity-item">
+                <div class="amenity-icon">🌿</div>
+                <div class="amenity-name">Entry Arch</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🌲</div>
+                <div class="amenity-name">Forest Whispers</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏞️</div>
+                <div class="amenity-name">Mystic Lagoon</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">⚽</div>
+                <div class="amenity-name">Multi Use Court</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏐</div>
+                <div class="amenity-name">Volleyball Court</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏛️</div>
+                <div class="amenity-name">Little Explorers Cove</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏓</div>
+                <div class="amenity-name">Pickleball Court</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏏</div>
+                <div class="amenity-name">Cricket Pitch</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🌅</div>
+                <div class="amenity-name">Twilight Bay</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏊</div>
+                <div class="amenity-name">Swimming Pool</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏠</div>
+                <div class="amenity-name">Clubhouse</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🌱</div>
+                <div class="amenity-name">Open Gathering Lawn</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">☕</div>
+                <div class="amenity-name">SkyBrew Cafe</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🧘</div>
+                <div class="amenity-name">Zen Sky Meditation</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🎭</div>
+                <div class="amenity-name">Amphitheatre</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">☀️</div>
+                <div class="amenity-name">Sunbeam Lounge</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🛝</div>
+                <div class="amenity-name">Kids Swing Haven</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🚶</div>
+                <div class="amenity-name">Elder's Wisdom Walk</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🌺</div>
+                <div class="amenity-name">Tranquil Patch</div>
+            </div>
+            
+            <div class="amenity-item">
+                <div class="amenity-icon">🏸</div>
+                <div class="amenity-name">Badminton Court</div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- <section class="py-4 bg-main">
 
